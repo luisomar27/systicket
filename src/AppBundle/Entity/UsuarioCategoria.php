@@ -24,16 +24,16 @@ class UsuarioCategoria
     /**
      * @var int
      *
-     * @ORM\Column(name="usuarioid", type="integer")
+     * @ORM\Column(name="usuarioId", type="integer")
      */
-    private $usuarioid;
+    private $usuarioId;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="categoriaid", type="integer")
+     * @ORM\Column(name="categoriaId", type="integer")
      */
-    private $categoriaid;
+    private $categoriaId;
 
 
     /**
@@ -47,51 +47,50 @@ class UsuarioCategoria
     }
 
     /**
-     * Set usuarioid
+     * Set usuarioId
      *
-     * @param integer $usuarioid
+     * @param integer $usuarioId
      *
      * @return UsuarioCategoria
      */
-    public function setUsuarioid($usuarioid)
+    public function setUsuarioId($usuarioId)
     {
-        $this->usuarioid = $usuarioid;
+        $this->usuarioId = $usuarioId;
 
         return $this;
     }
 
     /**
-     * Get usuarioid
+     * Get usuarioId
      *
      * @return int
      */
-    public function getUsuarioid()
+    public function getUsuarioId()
     {
-        return $this->usuarioid;
+        return $this->usuarioId;
     }
 
     /**
-     * Set categoriaid
+     * Set categoriaId
      *
-     * @param integer $categoriaid
+     * @param integer $categoriaId
      *
      * @return UsuarioCategoria
      */
-    public function setCategoriaid($categoriaid)
+    public function setCategoriaId($categoriaId)
     {
-        $this->categoriaid = $categoriaid;
+        $this->categoriaId = $categoriaId;
 
         return $this;
     }
 
     /**
-     * Get categoriaid
+     * Get categoriaId
      *
      * @return int
      */
-    public function getCategoriaid()
+    public function getCategoriaId()
     {
-        return $this->categoriaid;
+        return $this->categoriaId;
     }
 }
-

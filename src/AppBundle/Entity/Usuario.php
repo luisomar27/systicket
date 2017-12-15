@@ -15,7 +15,7 @@ class Usuario
     /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(name="usuario_id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
@@ -24,58 +24,59 @@ class Usuario
     /**
      * @var string
      *
-     * @ORM\Column(name="Nombres", type="string", length=85)
+     * @ORM\Column(name="nombres", type="string", length=50)
      */
-    private $userName;
+    private $nombres;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Apellidos", type="string", length=170)
+     * @ORM\Column(name="apellidos", type="string", length=50, nullable=true)
      */
-    private $userLastname;
+    private $apellidos;
 
-	/**
+    /**
      * @var string
      *
-     * @ORM\Column(name="Usuario", type="string", length=25)
+     * @ORM\Column(name="username", type="string", length=50, unique=true)
      */
-    private $nickname;
-	
-	/**
+    private $username;
+
+    /**
      * @var string
      *
-     * @ORM\Column(name="Clave", type="string", length=50)
+     * @ORM\Column(name="password", type="string", length=50)
      */
     private $password;
-	
-	/**
+
+    /**
      * @var string
      *
-     * @ORM\Column(name="TipoUsuario", type="string", length=50)
+     * @ORM\Column(name="tipoUsuario", type="string", length=50)
      */
-    private $userType;
-	
-	/**
+    private $tipoUsuario;
+
+    /**
      * @var int
      *
-     * @ORM\Column(name="Rol", type="integer")
+     * @ORM\Column(name="rolId", type="integer")
      */
-    private $idRol;
-	
-	/**
+    private $rolId;
+
+    /**
      * @var string
      *
-     * @ORM\Column(name="EstadoUsuario", type="string", length=20)
+     * @ORM\Column(name="estado", type="string", length=50)
      */
-    private $userStatus;
-	
-	/**
+    private $estado;
+
+    /**
      * @var \DateTime
      *
-     * @ORM\Column(name="FechaRegistroUsuario", type="datetime")
+     * @ORM\Column(name="fechaRegistro", type="datetime")
      */
-    private $userCreateDate;
+    private $fechaRegistro;
+
 
     /**
      * Get id
@@ -88,75 +89,75 @@ class Usuario
     }
 
     /**
-     * Set userName
+     * Set nombres
      *
-     * @param string $userName
+     * @param string $nombres
      *
      * @return Usuario
      */
-    public function setNombres($userName)
+    public function setNombres($nombres)
     {
-        $this->userName = $userName;
+        $this->nombres = $nombres;
 
         return $this;
     }
 
     /**
-     * Get userName
+     * Get nombres
      *
      * @return string
      */
     public function getNombres()
     {
-        return $this->userName;
+        return $this->nombres;
     }
 
     /**
-     * Set userLastname
+     * Set apellidos
      *
-     * @param string $userLastname
+     * @param string $apellidos
      *
      * @return Usuario
      */
-    public function setApellidos($userLastname)
+    public function setApellidos($apellidos)
     {
-        $this->userLastname = $userLastname;
+        $this->apellidos = $apellidos;
 
         return $this;
     }
 
     /**
-     * Get userLastname
+     * Get apellidos
      *
      * @return string
      */
     public function getApellidos()
     {
-        return $this->userLastname;
+        return $this->apellidos;
     }
 
-   /**
-     * Set nickname
+    /**
+     * Set username
      *
-     * @param string $nickname
+     * @param string $username
      *
      * @return Usuario
      */
-    public function setUsuario($nickname)
+    public function setUsername($username)
     {
-        $this->nickname = $nickname;
+        $this->username = $username;
 
         return $this;
     }
 
     /**
-     * Get nickname
+     * Get username
      *
      * @return string
      */
-    public function getUsuario()
+    public function getUsername()
     {
-        return $this->nickname;
+        return $this->username;
     }
 
     /**
@@ -166,7 +167,7 @@ class Usuario
      *
      * @return Usuario
      */
-    public function setClave($password)
+    public function setPassword($password)
     {
         $this->password = $password;
 
@@ -178,104 +179,104 @@ class Usuario
      *
      * @return string
      */
-    public function getClave()
+    public function getPassword()
     {
         return $this->password;
     }
-	
-	   /**
-     * Set userType
+
+    /**
+     * Set tipoUsuario
      *
-     * @param string $userType
+     * @param string $tipoUsuario
      *
      * @return Usuario
      */
-    public function setTipoUsuario($userType)
+    public function setTipoUsuario($tipoUsuario)
     {
-        $this->userType = $userType;
+        $this->tipoUsuario = $tipoUsuario;
 
         return $this;
     }
 
     /**
-     * Get userType
+     * Get tipoUsuario
      *
      * @return string
      */
     public function getTipoUsuario()
     {
-        return $this->userType;
+        return $this->tipoUsuario;
     }
 
     /**
-     * Set idRol
+     * Set rolId
      *
-     * @param integer $idRol
+     * @param integer $rolId
      *
      * @return Usuario
      */
-    public function setRol($idRol)
+    public function setRolId($rolId)
     {
-        $this->idRol = $idRol;
+        $this->rolId = $rolId;
 
         return $this;
     }
 
     /**
-     * Get idRol
+     * Get rolId
      *
-     * @return integer
+     * @return int
      */
-    public function getRol()
+    public function getRolId()
     {
-        return $this->idRol;
+        return $this->rolId;
     }
 
-   /**
-     * Set userStatus
+    /**
+     * Set estado
      *
-     * @param string $userStatus
+     * @param string $estado
      *
      * @return Usuario
      */
-    public function setEstadoUsuario($userStatus)
+    public function setEstado($estado)
     {
-        $this->userStatus = $userStatus;
+        $this->estado = $estado;
 
         return $this;
     }
 
     /**
-     * Get userStatus
+     * Get estado
      *
      * @return string
      */
-    public function getEstadoUsuario()
+    public function getEstado()
     {
-        return $this->userStatus;
+        return $this->estado;
     }
 
     /**
-     * Set userCreateDate
+     * Set fechaRegistro
      *
-     * @param \DateTime $userCreateDate
+     * @param \DateTime $fechaRegistro
      *
      * @return Usuario
      */
-    public function setFechaRegistroUsuario($userCreateDate)
+    public function setFechaRegistro($fechaRegistro)
     {
-        $this->userCreateDate = $userCreateDate;
+        $this->fechaRegistro = $fechaRegistro;
 
         return $this;
     }
 
     /**
-     * Get userCreateDate
+     * Get fechaRegistro
      *
      * @return \DateTime
      */
-    public function getFechaRegistroUsuario()
+    public function getFechaRegistro()
     {
-        return $this->userCreateDate;
+        return $this->fechaRegistro;
     }
 }

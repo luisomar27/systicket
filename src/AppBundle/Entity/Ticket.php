@@ -24,65 +24,65 @@ class Ticket
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="fechacreado", type="datetime")
+     * @ORM\Column(name="fechaCreado", type="datetime")
      */
-    private $fechacreado;
+    private $fechaCreado;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="fechaestado", type="datetime")
+     * @ORM\Column(name="fechaEstado", type="datetime")
      */
-    private $fechaestado;
+    private $fechaEstado;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="fechacierre", type="datetime", nullable=true)
+     * @ORM\Column(name="fechaCierre", type="datetime")
      */
-    private $fechacierre;
+    private $fechaCierre;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="descripcionproblema", type="string", length=255)
+     * @ORM\Column(name="descripcion", type="text")
      */
-    private $descripcionproblema;
+    private $descripcion;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="categoria", type="integer")
+     * @ORM\Column(name="categoriaId", type="integer")
      */
-    private $categoria;
+    private $categoriaId;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="estado", type="string", length=20)
+     * @ORM\Column(name="estado", type="string", length=50)
      */
     private $estado;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="prioridad", type="string", length=10)
+     * @ORM\Column(name="prioridad", type="string", length=50)
      */
     private $prioridad;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="usuariosolicitante", type="integer")
+     * @ORM\Column(name="usuarioSolicitanteId", type="integer")
      */
-    private $usuariosolicitante;
+    private $usuarioSolicitanteId;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="usuarioasignado", type="integer", nullable=true)
+     * @ORM\Column(name="usuarioAsignadoId", type="integer")
      */
-    private $usuarioasignado;
+    private $usuarioAsignadoId;
 
 
     /**
@@ -96,123 +96,123 @@ class Ticket
     }
 
     /**
-     * Set fechacreado
+     * Set fechaCreado
      *
-     * @param \DateTime $fechacreado
+     * @param \DateTime $fechaCreado
      *
      * @return Ticket
      */
-    public function setFechacreado($fechacreado)
+    public function setFechaCreado($fechaCreado)
     {
-        $this->fechacreado = $fechacreado;
+        $this->fechaCreado = $fechaCreado;
 
         return $this;
     }
 
     /**
-     * Get fechacreado
+     * Get fechaCreado
      *
      * @return \DateTime
      */
-    public function getFechacreado()
+    public function getFechaCreado()
     {
-        return $this->fechacreado;
+        return $this->fechaCreado;
     }
 
     /**
-     * Set fechaestado
+     * Set fechaEstado
      *
-     * @param \DateTime $fechaestado
+     * @param \DateTime $fechaEstado
      *
      * @return Ticket
      */
-    public function setFechaestado($fechaestado)
+    public function setFechaEstado($fechaEstado)
     {
-        $this->fechaestado = $fechaestado;
+        $this->fechaEstado = $fechaEstado;
 
         return $this;
     }
 
     /**
-     * Get fechaestado
+     * Get fechaEstado
      *
      * @return \DateTime
      */
-    public function getFechaestado()
+    public function getFechaEstado()
     {
-        return $this->fechaestado;
+        return $this->fechaEstado;
     }
 
     /**
-     * Set fechacierre
+     * Set fechaCierre
      *
-     * @param \DateTime $fechacierre
+     * @param \DateTime $fechaCierre
      *
      * @return Ticket
      */
-    public function setFechacierre($fechacierre)
+    public function setFechaCierre($fechaCierre)
     {
-        $this->fechacierre = $fechacierre;
+        $this->fechaCierre = $fechaCierre;
 
         return $this;
     }
 
     /**
-     * Get fechacierre
+     * Get fechaCierre
      *
      * @return \DateTime
      */
-    public function getFechacierre()
+    public function getFechaCierre()
     {
-        return $this->fechacierre;
+        return $this->fechaCierre;
     }
 
     /**
-     * Set descripcionproblema
+     * Set descripcion
      *
-     * @param string $descripcionproblema
+     * @param string $descripcion
      *
      * @return Ticket
      */
-    public function setDescripcionproblema($descripcionproblema)
+    public function setDescripcion($descripcion)
     {
-        $this->descripcionproblema = $descripcionproblema;
+        $this->descripcion = $descripcion;
 
         return $this;
     }
 
     /**
-     * Get descripcionproblema
+     * Get descripcion
      *
      * @return string
      */
-    public function getDescripcionproblema()
+    public function getDescripcion()
     {
-        return $this->descripcionproblema;
+        return $this->descripcion;
     }
 
     /**
-     * Set categoria
+     * Set categoriaId
      *
-     * @param integer $categoria
+     * @param integer $categoriaId
      *
      * @return Ticket
      */
-    public function setCategoria($categoria)
+    public function setCategoriaId($categoriaId)
     {
-        $this->categoria = $categoria;
+        $this->categoriaId = $categoriaId;
 
         return $this;
     }
 
     /**
-     * Get categoria
+     * Get categoriaId
      *
      * @return int
      */
-    public function getCategoria()
+    public function getCategoriaId()
     {
-        return $this->categoria;
+        return $this->categoriaId;
     }
 
     /**
@@ -264,51 +264,50 @@ class Ticket
     }
 
     /**
-     * Set usuariosolicitante
+     * Set usuarioSolicitanteId
      *
-     * @param integer $usuariosolicitante
+     * @param integer $usuarioSolicitanteId
      *
      * @return Ticket
      */
-    public function setUsuariosolicitante($usuariosolicitante)
+    public function setUsuarioSolicitanteId($usuarioSolicitanteId)
     {
-        $this->usuariosolicitante = $usuariosolicitante;
+        $this->usuarioSolicitanteId = $usuarioSolicitanteId;
 
         return $this;
     }
 
     /**
-     * Get usuariosolicitante
+     * Get usuarioSolicitanteId
      *
      * @return int
      */
-    public function getUsuariosolicitante()
+    public function getUsuarioSolicitanteId()
     {
-        return $this->usuariosolicitante;
+        return $this->usuarioSolicitanteId;
     }
 
     /**
-     * Set usuarioasignado
+     * Set usuarioAsignadoId
      *
-     * @param integer $usuarioasignado
+     * @param integer $usuarioAsignadoId
      *
      * @return Ticket
      */
-    public function setUsuarioasignado($usuarioasignado)
+    public function setUsuarioAsignadoId($usuarioAsignadoId)
     {
-        $this->usuarioasignado = $usuarioasignado;
+        $this->usuarioAsignadoId = $usuarioAsignadoId;
 
         return $this;
     }
 
     /**
-     * Get usuarioasignado
+     * Get usuarioAsignadoId
      *
      * @return int
      */
-    public function getUsuarioasignado()
+    public function getUsuarioAsignadoId()
     {
-        return $this->usuarioasignado;
+        return $this->usuarioAsignadoId;
     }
 }
-

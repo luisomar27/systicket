@@ -24,28 +24,28 @@ class HistorialTicket
     /**
      * @var int
      *
-     * @ORM\Column(name="ticketid", type="integer")
+     * @ORM\Column(name="ticketId", type="integer")
      */
-    private $ticketid;
+    private $ticketId;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="usuarioid", type="integer")
+     * @ORM\Column(name="usuarioId", type="integer")
      */
-    private $usuarioid;
+    private $usuarioId;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="fecharegistro", type="datetime")
+     * @ORM\Column(name="fecha", type="datetime")
      */
-    private $fecharegistro;
+    private $fecha;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="estado", type="string", length=20)
+     * @ORM\Column(name="estado", type="string", length=50)
      */
     private $estado;
 
@@ -61,75 +61,75 @@ class HistorialTicket
     }
 
     /**
-     * Set ticketid
+     * Set ticketId
      *
-     * @param integer $ticketid
+     * @param integer $ticketId
      *
      * @return HistorialTicket
      */
-    public function setTicketid($ticketid)
+    public function setTicketId($ticketId)
     {
-        $this->ticketid = $ticketid;
+        $this->ticketId = $ticketId;
 
         return $this;
     }
 
     /**
-     * Get ticketid
+     * Get ticketId
      *
      * @return int
      */
-    public function getTicketid()
+    public function getTicketId()
     {
-        return $this->ticketid;
+        return $this->ticketId;
     }
 
     /**
-     * Set usuarioid
+     * Set usuarioId
      *
-     * @param integer $usuarioid
+     * @param integer $usuarioId
      *
      * @return HistorialTicket
      */
-    public function setUsuarioid($usuarioid)
+    public function setUsuarioId($usuarioId)
     {
-        $this->usuarioid = $usuarioid;
+        $this->usuarioId = $usuarioId;
 
         return $this;
     }
 
     /**
-     * Get usuarioid
+     * Get usuarioId
      *
      * @return int
      */
-    public function getUsuarioid()
+    public function getUsuarioId()
     {
-        return $this->usuarioid;
+        return $this->usuarioId;
     }
 
     /**
-     * Set fecharegistro
+     * Set fecha
      *
-     * @param \DateTime $fecharegistro
+     * @param \DateTime $fecha
      *
      * @return HistorialTicket
      */
-    public function setFecharegistro($fecharegistro)
+    public function setFecha($fecha)
     {
-        $this->fecharegistro = $fecharegistro;
+        $this->fecha = $fecha;
 
         return $this;
     }
 
     /**
-     * Get fecharegistro
+     * Get fecha
      *
      * @return \DateTime
      */
-    public function getFecharegistro()
+    public function getFecha()
     {
-        return $this->fecharegistro;
+        return $this->fecha;
     }
 
     /**
@@ -156,4 +156,3 @@ class HistorialTicket
         return $this->estado;
     }
 }
-

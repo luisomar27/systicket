@@ -24,9 +24,9 @@ class CategoriaTicket
     /**
      * @var string
      *
-     * @ORM\Column(name="nombrecategoria", type="string", length=50)
+     * @ORM\Column(name="nombreCategoria", type="string", length=50)
      */
-    private $nombrecategoria;
+    private $nombreCategoria;
 
 
     /**
@@ -40,27 +40,26 @@ class CategoriaTicket
     }
 
     /**
-     * Set nombrecategoria
+     * Set nombreCategoria
      *
-     * @param string $nombrecategoria
+     * @param string $nombreCategoria
      *
      * @return CategoriaTicket
      */
-    public function setNombrecategoria($nombrecategoria)
+    public function setNombreCategoria($nombreCategoria)
     {
-        $this->nombrecategoria = $nombrecategoria;
+        $this->nombreCategoria = $nombreCategoria;
 
         return $this;
     }
 
     /**
-     * Get nombrecategoria
+     * Get nombreCategoria
      *
      * @return string
      */
-    public function getNombrecategoria()
+    public function getNombreCategoria()
     {
-        return $this->nombrecategoria;
+        return $this->nombreCategoria;
     }
 }
-
